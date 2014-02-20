@@ -8,3 +8,6 @@ from django.template import RequestContext
 
 def signup(request):
     return render_to_response('signup.html', context_instance=RequestContext(request))
+
+def signin(request):
+    return render_to_response('signin.html', context_instance=RequestContext(request))

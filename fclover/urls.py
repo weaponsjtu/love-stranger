@@ -10,7 +10,10 @@ urlpatterns = patterns('',
     # url(r'^fclover/', include('fclover.foo.urls')),
     url(r'^$', 'fclover.activity.views.index'),
 
-    url(r'^/signup/$', 'fclover.account.views.singup'),
+    url(r'^/signup/$', 'fclover.account.views.signup'),
+
+
+    url(r'^/signin/$', 'fclover.account.views.signin'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
