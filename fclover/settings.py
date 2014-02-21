@@ -23,6 +23,10 @@ DATABASES = {
     }
 }
 
+#user profile
+#AUTH_PROFILE_MODULE = 'account.UserProfile' #an deprecated setting
+AUTH_USER_MODEL = 'account.UserProfile'
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -34,7 +38,7 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Asia/Shanghai' #'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -127,9 +131,9 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'fclover.activity',
-    'fclover.account',
-    'fclover.comment',
+    'activity',
+    'account',
+    'comment',
 )
 
 # A sample logging configuration. The only tangible logging
