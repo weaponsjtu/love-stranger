@@ -20,4 +20,4 @@ def signin(request):
             return HttpResponse('Welcome back!')
     else:
         form = SigninForm()
-    return render_to_response('signin.html', {'form': form},context_instance=RequestContext(request))
+    return render_to_response('account/signin.html', {'form': form},context_instance=RequestContext(request))
