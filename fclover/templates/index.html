@@ -10,13 +10,28 @@
 
 <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
+
 <div>
-<p>Love Stranger</p>
-<p>Tell me what is surprise!</p>
+    <p>Love Stranger</p>
+    <a href="/activity/create">Create Event</a>
 </div>
+
+<div class="events_list">
+    <ul>
+        {% for activity in activity_list %}
+        <li>
+            <div class="pic"></div>
+            <div class="info">
+                <div class="title">{{activity.title}}</div>
+                <p>{{activity.content}}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 </body>
 </html>

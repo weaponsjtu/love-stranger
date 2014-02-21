@@ -6,6 +6,7 @@ from fclover.account.models import UserProfile
 
 class Activity(models.Model):
     title = models.CharField(max_length=1000)
+    #picture = models.CharField(max_length=100)
     content = models.TextField(max_length=10000, default="", blank=True)
     initiator = models.OneToOneField(UserProfile)
     participant = models.ManyToManyField(UserProfile, related_name='activity_users')
