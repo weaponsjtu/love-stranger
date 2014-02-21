@@ -19,13 +19,26 @@
 <p>signin here</p>
 <p></p>
 </div>
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
 
-<form action="/search/" method="get">
-    <label for="account">account:</label>
-    <input type="text" name="name" id = "account">
-    <label for="pw">password:</label>
-    <input type="password" name="password", id = "pw">
-    <input type="submit" value="Signin">
-</form>
-</body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="field">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+            {{ form.name.errors }}
+        </div>
+        <div class="field">
+            {% csrf_token %}
+            <label for="id_password">Password:</label>
+            {{ form.password }}
+            {{ form.password.errors }}
+        </div>
+        <input type="submit" value="Submit">
+    </form>
 </html>
