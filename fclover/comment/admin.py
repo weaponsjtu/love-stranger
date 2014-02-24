@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from comment.models import *
+from fclover.comment.models import *
 
 admin.site.register(CommentU2A)
 admin.site.register(CommentU2U)

@@ -1,6 +1,6 @@
 from django.db import models
 
-from account.models import UserProfile
+from fclover.account.models import UserProfile
 
 # Create your models here.
 

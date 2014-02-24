@@ -10,13 +10,13 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'fclover.views.home', name='home'),
     # url(r'^fclover/', include('fclover.foo.urls')),
-    url(r'^$', 'activity.views.index'),
+    url(r'^$', 'fclover.activity.views.index'),
 
-    url(r'^signup/$', 'account.views.signup'),
-    url(r'^signin/$', 'account.views.signin'),
+    url(r'^signup/$', 'fclover.account.views.signup'),
+    url(r'^signin/$', 'fclover.account.views.signin'),
 
-    url(r'^create/$', 'activity.views.create'),
-    url(r'^delete/$', 'activity.views.delete'),
+    url(r'^create/$', 'fclover.activity.views.create'),
+    url(r'^delete/$', 'fclover.activity.views.delete'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
