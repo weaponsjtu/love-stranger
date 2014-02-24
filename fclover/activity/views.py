@@ -13,7 +13,7 @@ def index(request):
     return render_to_response('index.html', {'activity_list': activity_list}, context_instance=RequestContext(request))
 
 def create(request):
-    return
+    return render_to_response('activity/create.html', context_instance=RequestContext(request))
 
 def delete(request):
     return
