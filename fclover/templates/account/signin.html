@@ -14,15 +14,19 @@
 </head>
 
 <body>
-<div>
-<p>Show me your love</p>
-<p>signin here</p>
-<p></p>
-</div>
+    <div>
+        <p>Show me your love</p>
+        <p>signin here</p>
+        <p></p>
+    </div>
     {% if form.errors %}
         <p style="color: red;">
             Please correct the error{{ form.errors|pluralize }} below.
         </p>
+    {% endif %}
+
+    {% if form.invalid %}
+	<p> You are not registered. </p>
     {% endif %}
 
     <form action="" method="post">
@@ -41,4 +45,5 @@
         </div>
         <input type="submit" value="Submit">
     </form>
+</body>
 </html>

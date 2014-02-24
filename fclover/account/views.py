@@ -14,10 +14,17 @@ def signup(request):
 
 def signin(request):
     if request.method == 'POST':
-        form = SigninForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            return HttpResponse('Welcome back!')
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+        user = auth.authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            # Correct password, and the user is marked "active"
+            auth.login(request, user)
+            # Redirect to a success page.
+            return HttpResponse("account/loggedin")
+        else:
+            # Show an error page
+            return render_to_response('account/signin.html', {'form': form, 'invalid': True}, context_instance=RequestContext(request))
     else:
         form = SigninForm()
     return render_to_response('account/signin.html', {'form': form},context_instance=RequestContext(request))
