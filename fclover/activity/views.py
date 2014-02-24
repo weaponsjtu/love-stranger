@@ -12,4 +12,8 @@ def index(request):
     activity_list = Activity.objects.all().order_by('-createTime')
     return render_to_response('index.html', {'activity_list': activity_list}, context_instance=RequestContext(request))
 
+def create(request):
+    return
 
+def delete(request):
+    return

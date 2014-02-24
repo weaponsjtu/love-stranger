@@ -1,5 +1,6 @@
 # Django settings for fclover project.
 import os
+import logging
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,6 +10,8 @@ BASE = os.path.dirname(__file__)
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
+
+DEFAULT_CHARSET = 'utf-8'
 
 MANAGERS = ADMINS
 
@@ -20,6 +23,7 @@ DATABASES = {
         'PASSWORD': 'root',                  # Not used with sqlite3.
         'HOST': '127.0.0.1',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+        'TEST_CHARSET': 'utf-8',
     }
 }
 
@@ -124,13 +128,13 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admindocs',
     'activity',
     'account',
     'comment',
@@ -145,15 +149,21 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
+        #'mail_admins': {
+        #    'level': 'ERROR',
+        #    'class': 'django.utils.log.AdminEmailHandler'
+        #}
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'fclover.log',
+        },
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
+            #'handlers': ['mail_admins'],
+            'handlers': ['file'],
+            'level': 'DEBUG',
             'propagate': True,
         },
     }
