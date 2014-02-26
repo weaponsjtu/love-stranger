@@ -32,9 +32,6 @@
     <form action="" method="post">
         {% csrf_token %}
         <div class="field">
-	    <input required type="email" name="email" placeholder="Mail">
-	</div>
-        <div class="field">
             {% csrf_token %}
             <label for="id_name">Name:</label>
             {{ form.name }}

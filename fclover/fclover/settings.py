@@ -56,6 +56,8 @@ ROOT_URLCONF = 'fclover.urls'
 
 WSGI_APPLICATION = 'fclover.wsgi.application'
 
+AUTHENTICATION_BACKENDS = ('fclover.account.backends.EmailAuthBackend',
+ 							'django.contrib.auth.backends.ModelBackend',)
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
