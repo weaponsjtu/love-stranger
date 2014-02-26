@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="author" content="nightcrawler">
+
+<link rel="icon" href="/static/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/bootstrap.min.css">
+
+<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div>
+    <p>Create Activity</p>
+</div>
+
+<form action="" method="pose">
+{% csrf_token %}
+    <div class="item">
+        <h3>Title</h3>
+        <input class="basic-input" name="title" type="text" size="60" />
+    </div>
+    <div class="item">
+        <h3>Content</h3>
+        <textarea name="content" cols="100" rows="10"></textarea>
+    </div>
+    <div class="save-button">
+        <input class="success btn-submit" type="submit" value="Submit" />
+    </div>
+</form>
+
+</body>
+</html>

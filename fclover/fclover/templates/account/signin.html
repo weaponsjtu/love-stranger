@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="author" content="nightcrawler">
+
+<link rel="icon" href="/static/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+
+<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <p>Show me your love</p>
+        <p>signin here</p>
+        <p></p>
+    </div>
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    {% if invalid %}
+	<p> Wrong username or password. </p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="field">
+	    <input required type="email" name="email" placeholder="Mail">
+	</div>
+        <div class="field">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+            {{ form.name.errors }}
+        </div>
+        <div class="field">
+            {% csrf_token %}
+            <label for="id_password">Password:</label>
+            {{ form.password }}
+            {{ form.password.errors }}
+        </div>
+        <button class="sign-button" type="submit">signin</button>
+    </form>
+</body>
+</html>
