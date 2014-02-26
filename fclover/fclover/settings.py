@@ -38,10 +38,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'fclover.account',
-	'fclover.activity',
-	'fclover.comment',
+    'fclover.account',
+    'fclover.activity',
+    'fclover.comment',
+    'registration',
+    'django.contrib.sites',
 )
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+                            # This is the number of days users will have to activate their accounts after registering. 
+                            # If a user does not activate within that period, the account will remain permanently inactive and may be deleted by main
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
