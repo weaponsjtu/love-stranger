@@ -30,6 +30,7 @@ DATABASES = {
 #user profile
 #AUTH_PROFILE_MODULE = 'account.UserProfile' #an deprecated setting
 AUTH_USER_MODEL = 'account.UserProfile'
+#UTHENTICATION_BACKENDS = ('backends.EmailAuthBackend',)
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts

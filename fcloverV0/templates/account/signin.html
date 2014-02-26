@@ -32,6 +32,9 @@
     <form action="" method="post">
         {% csrf_token %}
         <div class="field">
+	    <input required type="email" name="email" placeholder="Mail">
+	</div>
+        <div class="field">
             {% csrf_token %}
             <label for="id_name">Name:</label>
             {{ form.name }}
@@ -43,7 +46,7 @@
             {{ form.password }}
             {{ form.password.errors }}
         </div>
-        <input type="submit" value="Submit">
+        <button class="sign-button" type="submit">signin</button>
     </form>
 </body>
 </html>
