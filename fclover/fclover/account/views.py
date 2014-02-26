@@ -14,7 +14,7 @@ def signup(request):
 
 def signin(request):
     form = SigninForm()
-    if request.method == 'POST':
+    if request.POST:
         form = SigninForm(request.POST)
         username = request.POST.get('name', '')
         password = request.POST.get('password', '')
