@@ -19,6 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'xc2-eslig+wq7_y0^cd$3@uaojd$d)0f8oxhf#ig+nv9ypr=bf'
 
+SITE_ID = 1
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -45,7 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
 )
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
-                            # This is the number of days users will have to activate their accounts after registering. 
+                            # This is the number of days users will have to activate their accounts after registering.
                             # If a user does not activate within that period, the account will remain permanently inactive and may be deleted by main
 
 MIDDLEWARE_CLASSES = (
