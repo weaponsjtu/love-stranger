@@ -7,8 +7,8 @@ from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
-from registration import signals
-from registration.forms import RegistrationForm
+from fclover.registration import signals
+from fclover.registration.forms import RegistrationForm
 
 
 class _RequestPassingFormView(FormView):
