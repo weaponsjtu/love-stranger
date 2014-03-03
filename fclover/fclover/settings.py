@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'fclover.comment',
     'registration',
     'django.contrib.sites',
+    'django.contrib.humanize',
 )
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
                             # This is the number of days users will have to activate their accounts after registering.
