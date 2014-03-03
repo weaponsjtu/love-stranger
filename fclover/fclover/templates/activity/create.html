@@ -20,18 +20,38 @@
     <p>Create Activity</p>
 </div>
 
-<form action="" method="pose">
+<form action="/create/" method="post">
 {% csrf_token %}
     <div class="item">
         <h3>Title</h3>
         <input class="basic-input" name="title" type="text" size="60" />
     </div>
     <div class="item">
+        <h3>Picture</h3>
+        <input class="basic-input" name="picture" type="text" size="60" />
+    </div>
+    <div class="item">
+        <h3>Location</h3>
+        <input class="basic-input" name="location" type="text" size="60" />
+    </div>
+    <div class="item">
+        <h3>max male</h3>
+        <input class="basic-input" name="maxMale" type="text" size="60" />
+    </div>
+    <div class="item">
+        <h3>max female</h3>
+        <input class="basic-input" name="maxFemale" type="text" size="60" />
+    </div>
+    <div class="item">
         <h3>Content</h3>
         <textarea name="content" cols="100" rows="10"></textarea>
     </div>
+    <div class="item">
+        <h3>Type</h3>
+        <input class="basic-input" name="type" type="text" size="60" />
+    </div>
     <div class="save-button">
-        <input class="success btn-submit" type="submit" value="Submit" />
+        <input class="btn-success" type="submit" value="Submit" />
     </div>
 </form>
 
