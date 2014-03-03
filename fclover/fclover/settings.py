@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'fclover.account',
     'fclover.activity',
     'fclover.comment',
-    'registration',
+    'fclover.registration',
     'django.contrib.sites',
     'django.contrib.humanize',
 )
