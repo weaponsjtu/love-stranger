@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^signup/$', 'fclover.account.views.signup'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^signin/$', 'fclover.account.views.signin'),
+	url(r'^signin2/$','fclover.account.views.signin2'),
 
     url(r'^create/$', 'fclover.activity.views.create'),
     url(r'^delete/$', 'fclover.activity.views.delete'),
@@ -25,5 +26,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_URL}),
 )

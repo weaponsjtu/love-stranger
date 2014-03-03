@@ -28,3 +28,6 @@ def signin(request):
             # Show an error page
             return render_to_response('account/signin.html', {'form': form, 'invalid': True}, context_instance=RequestContext(request))
     return render_to_response('account/signin.html', {'form': form},context_instance=RequestContext(request))
+
+def signin2(request):
+	return render_to_response('account/signin_new.html', context_instance=RequestContext(request))
