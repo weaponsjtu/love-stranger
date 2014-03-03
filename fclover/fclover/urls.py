@@ -12,7 +12,6 @@ urlpatterns = patterns('',
     # url(r'^fclover/', include('fclover.foo.urls')),
     url(r'^$', 'fclover.activity.views.index'),
 
-    url(r'^signup/$', 'fclover.account.views.signup'),
     url(r'^accounts/', include('fclover.registration.backends.default.urls')),
     url(r'^signin/$', 'fclover.account.views.signin'),
 
